@@ -17,7 +17,7 @@
               <label for="">{{ userName }}</label>
               <button type="button" style="padding: 10px" (click)="cerrarSession()" class="btn btn-outline-danger"><i class="fa-solid fa-power-off"></i></button>
              }
-            
+
       </div>
 
       <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" class="collapse navbar-collapse me-4 order-lg-2 flex-row-reverse" id="navbarCollapse">
@@ -97,6 +97,7 @@
     <a class="d-table-cell handheld-toolbar-item" href="javascript:void(0)" data-bs-toggle="modal" (click)="openModal()">
       <span class="handheld-toolbar-icon"><i class="ci-user"></i></span>
       <span class="handheld-toolbar-label">Cuenta</span>
+      <span class="handheld-toolbar-label">Cuenta2</span>
     </a>
     <a class="d-table-cell handheld-toolbar-item" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" (click)="collapse.toggle()" onclick="window.scrollTo(0, 0)">
       <span class="handheld-toolbar-icon"><i class="ci-menu"></i></span>
