@@ -2,12 +2,22 @@
 <app-header></app-header>
 
 <!-- Page Title -->
-                  <div class="col-sm-6">
-                   
-                      Categoría
-                   
-                  </div>
-
+<div class="mb-md-5 mb-4 pb-md-0 pb-2">
+              <h2 class="h5 mb-2 pb-1">Imagen de Portada Recurso</h2>
+              <!-- Drag and drop file upload-->
+              <ngx-dropzone class="file-drop-area" (change)="onSelect($event)">
+                  <ngx-dropzone-label>
+                      <div class="file-drop-icon ci-cloud-upload"></div>
+                      <span class="file-drop-message">Arrastra y suelta aquí para subir la imagen de portada para el recurso</span>
+                  </ngx-dropzone-label>
+                  @for(f of files;track $index){
+                  <ngx-dropzone-preview [removable]="true" (removed)="onRemove(f)">
+                      <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                  </ngx-dropzone-preview>
+                  }
+              </ngx-dropzone>
+              <p class="mb-4 fs-sm">Tipos de formatos permitidos: PNG, JPG, GIF, WEBP, MP3 or MP4. Tamaño max: 100mb.</p>
+            </div>
 <!-- Content -->
 <div class="container mb-5 pb-3">
   <div class="bg-light shadow-lg rounded-3 overflow-hidden">
