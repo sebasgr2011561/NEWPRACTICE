@@ -2,9 +2,14 @@
 <app-header></app-header>
 
 <!-- Page Title -->
-<div class="page-title-overlap bg-accent pt-4">
-  <app-account-breadcrumbs></app-account-breadcrumbs>
-</div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="profile-name">
+                      Categoría
+                    </label>
+                    <select id="profile-rol" class="form-control" formControlName="idCategoria">
+                      <option *ngFor="let item of categorias" [value]="item.idCategoria" >{{ item.nombreCategoria }}</option>
+                    </select>
+                  </div>
 
 <!-- Content -->
 <div class="container mb-5 pb-3">
